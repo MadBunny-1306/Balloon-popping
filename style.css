@@ -1,0 +1,91 @@
+body {
+  position: relative;
+  background-color: rgba(176, 246, 255, 0.514);
+}
+
+header {
+  width: 50rem;
+  margin: 1.8rem auto;
+  padding: 2rem;
+}
+
+.text {
+  font-size: 1.8rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(15, 46, 66);
+  text-transform: uppercase;
+  text-align: center;
+  /* text-shadow: 0 0 10px rgb(255, 255, 255); */
+}
+
+.container {
+  width: 50rem;
+  height: 75vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgba(176, 246, 255, 0.658);
+  box-shadow: 0 0 8px 8px rgba(176, 246, 255, 0.918);
+}
+
+.balloon {
+  width: 120px;
+  height: 120px;
+  margin: 1rem;
+  background-color: rgb(210, 106, 219);
+  color: rgb(210, 106, 219);
+  border-radius: 100%;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.yellow {
+  background-color: rgb(248, 231, 78);
+  color: rgb(248, 231, 78);
+}
+.blue {
+  background-color: rgb(0, 162, 255);
+  color: rgb(0, 162, 255);
+}
+
+.green {
+  background-color: rgb(130, 228, 65);
+  color: rgb(130, 228, 65);
+}
+.message {
+  width: 35rem;
+  height: 20rem;
+  background-color: brown;
+  /* z-index: 3; */
+  margin-left: 36rem;
+  text-transform: uppercase;
+  color: antiquewhite;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  padding: 2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 6rem;
+  letter-spacing: 5px;
+  text-shadow: 0 0 8px rgb(255, 255, 255);
+}
+
+.nice {
+  color: black;
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden {
+  background-color: transparent;
+}
+
+.hide {
+  display: none;
+}
