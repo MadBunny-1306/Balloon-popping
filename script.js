@@ -3,9 +3,7 @@
 const balloon = document.querySelectorAll(".balloon");
 const message = document.querySelector(".message");
 const popped = document.querySelector(".hidden");
-// const popSound = new Audio("pop-sound.wav");
-// console.log(popSound);
-// console.log(popped);
+// document.getElementById("popSound").muted = true;
 // const pop = function () {
 //   balloon[i].classList.add("hidden");
 // };
@@ -17,22 +15,24 @@ const popped = document.querySelector(".hidden");
 //   });
 // });
 
+let audio = document.getElementById("popSound");
+// let popSound = new Audio("plopp.mp3");
+
 // pop balloons
 for (let i = 0; i < balloon.length; i++)
   balloon[i].addEventListener("mouseover", function () {
     balloon[i].classList.add("hidden");
-    // Audio.play();
-
-    // document.querySelector(".pop").classList.remove("hide");
-
-    // show final message
-    // if (popped == 20) {
-    //   document.querySelector(".container").classList.add("hide");
-    //   message.classList.remove("hide");
+    // let audio = document.getElementById("popSound");
+    audio.play();
+    // if (balloon[i].classList.add("hidden")) {
+    //   audio.muted;
     // }
+    // // document.querySelector(".pop").classList.remove("hide");
   });
-// document.querySelector(".text").style.textShadow = "0 0 10px blue";
+// show final message
+// if (popped == 20) {
+//   document.querySelector(".container").classList.add("hide");
+//   message.classList.remove("hide");
+// }
 
-//<audio id="audio" src="http://music.mp3"></audio>
-//let myAudio = document.querySelector('#audio')
-// myAudio.play()
+// document.querySelector(".text").style.textShadow = "0 0 10px blue";
