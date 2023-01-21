@@ -1,38 +1,33 @@
 "use strict";
 
-const balloon = document.querySelectorAll(".balloon");
+const balloons = document.querySelectorAll(".balloon");
 const message = document.querySelector(".message");
 const popped = document.querySelector(".hidden");
 // document.getElementById("popSound").muted = true;
-// const pop = function () {
-//   balloon[i].classList.add("hidden");
-// };
-
-// $(function () {
-//   $("balloon[i]").mouseover(function () {
-//     $("balloon[i]").hide();
-//     $("#popSound").play();
-//   });
-// });
 
 let audio = document.getElementById("popSound");
 // let popSound = new Audio("plopp.mp3");
 
-// pop balloons
-for (let i = 0; i < balloon.length; i++)
-  balloon[i].addEventListener("mouseover", function () {
-    balloon[i].classList.add("hidden");
-    // let audio = document.getElementById("popSound");
+// pop balloons - way 1
+// for (let i = 0; i < balloons.length; i++)
+//   balloons[i].addEventListener("mouseover", function () {
+//     balloons[i].classList.add("hidden");
+//     audio.play();
+//   // document.querySelector(".pop").classList.remove("hide");
+//   });
+
+// pop balloons - way 2
+
+for (const balloon of balloons) {
+  balloon.addEventListener("mouseover", function () {
+    balloon.classList.add("hidden");
     audio.play();
-    // if (balloon[i].classList.add("hidden")) {
-    //   audio.muted;
-    // }
-    // // document.querySelector(".pop").classList.remove("hide");
   });
+}
+// had to change event to click bc sound would'n play on mouseover, bc browser doesn't allow sound before interacting with document?
+
 // show final message
 // if (popped == 20) {
 //   document.querySelector(".container").classList.add("hide");
 //   message.classList.remove("hide");
 // }
-
-// document.querySelector(".text").style.textShadow = "0 0 10px blue";
