@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Let's get popping!</title>
     <link rel="stylesheet" href="reset.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
-    /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <p class="text">Move mouse over a balloon to pop it!</p>
+      <p class="header text hide">Keep going...</p>
     </header>
     <main>
+      <div class="start-div">
+        <p class="text">Move mouse over ballons to pop them!</p>
+        <button class="btnStart">let's go!</button>
+      </div>
       <div class="message hide">
         <span class="nice">nice! </span><br />
         all balloons popped!
       </div>
-      <section class="container">
+      <section class="container hide">
         <div class="circle balloon"></div>
         <div class="circle balloon yellow"></div>
         <div class="circle balloon"></div>
@@ -50,9 +50,6 @@
       playsinline="true"
       src="audio/plopp.mp3"
     ></audio>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>

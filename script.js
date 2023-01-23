@@ -2,39 +2,42 @@
 
 const balloons = document.querySelectorAll(".balloon");
 const message = document.querySelector(".message");
-const popped = document.querySelectorAll(".hidden");
-// const balloon = balloons[i];
-// document.getElementById("popSound").muted = true;
+const container = document.querySelector(".container");
+const header = document.querySelector(".header");
+const startBtn = document.querySelector(".btnStart");
 
 let audio = document.getElementById("popSound");
-// let popSound = new Audio("plopp.mp3");
 
-// pop balloons - way 1
-// for (let i = 0; i < balloons.length; i++)
-//   balloons[i].addEventListener("mouseover", function () {
-//     balloons[i].classList.add("hidden");
-//     audio.play();
-//   // document.querySelector(".pop").classList.remove("hide");
-//   });
+startBtn.addEventListener("click", function () {
+  document.querySelector(".start-div").classList.add("hide");
+  header.classList.remove("hide");
+  container.classList.remove("hide");
+});
 
-// pop balloons - way 2
-let pop = 0;
+// startBtn.addEventListener("click", function () {
+//   document.getElementById("#start-div").classList.add("hide");
+//   header.classList.remove("hide");
+//   container.classList.remove("hide");
+// });
+
+// pop balloons
+
 for (const balloon of balloons) {
   balloon.addEventListener("mouseover", function () {
     balloon.classList.add("hidden");
     balloon.textContent = "POP!";
     audio.play();
     balloon.classList.remove("balloon");
-    pop++;
-    console.log("count");
-    console.log(pop);
+
+    let popped = document.querySelectorAll(".hidden");
+
+    // show final message
+    if (popped.length >= 20) {
+      container.classList.add("hide");
+      header.classList.add("hide");
+      message.classList.remove("hide");
+    }
   });
 }
 
 // browser doesn't allow sound before interacting with document? when i refresh the page, i get the error and sound will work after i click on a balloon
-
-// show final message
-if (popped.length >= balloons.length) {
-  document.querySelector(".container").classList.add("hide");
-  message.classList.remove("hide");
-}
