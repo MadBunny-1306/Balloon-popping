@@ -62,7 +62,7 @@ header {
   /* z-index: 3; */
   margin-left: 38rem;
   text-transform: uppercase;
-  color: rgb(102, 138, 238);
+  color: rgb(0, 162, 255);
   font-size: 3rem;
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
@@ -75,7 +75,7 @@ header {
 }
 
 .nice {
-  color: rgb(37, 48, 207);
+  color: rgb(0, 74, 117);
   font-size: 4rem;
   font-family: Arial, Helvetica, sans-serif;
 }
